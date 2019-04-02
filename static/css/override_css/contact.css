@@ -1,0 +1,157 @@
+/* --- Reset Styles --- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: verdana, sans-serif;
+}
+
+/* --- Navigation Styles */
+.jumbotron {
+    background-color: transparent;
+}
+
+.nav-item{
+  color: #264653;
+}
+
+.navigation {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navigation li {
+  list-style: none;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.navigation li a {
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #264653;
+  padding: 10px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navigation a:hover {
+  color: #e8811f;
+  border-bottom: 3px solid #ef7f15;
+  cursor: pointer;
+}
+
+/* --- Main Area Styles --- */
+.full-page-container {
+  background-image: url('../../images/trees.png');
+  background-size: cover;
+}
+
+/*Page Title*/
+.container_head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+}
+
+h2{
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 6rem;
+  color: #264653;
+  padding-top: 35px;
+}
+
+/*Main Body*/
+#getintouch {
+  height: 48rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+
+h3{
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #264653;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 70px;
+  padding-right: 150px;
+}
+
+.form_container {
+  width: 400px;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: left;
+}
+
+.input_field, .submit {
+  width: 100%;
+}
+
+.input_field {
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  border: 1px solid #264653;
+}
+
+.input_field:focus {
+  outline: none;
+}
+
+.submit {
+  background-color: #264653;
+  text-transform: uppercase;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 5px 0;
+  margin-bottom: 25px;
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: #ef7f15;
+}
+
+/*footer*/
+
+footer {
+  height: 150px;
+  background-color: #264653;
+}
+
+div.links {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer h2{
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding-top: 30px;
+}
+
+footer a {
+   padding: 0 15px;
+   font-size: 1.1rem;
+   letter-spacing: 1px;
+}

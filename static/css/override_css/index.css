@@ -1,0 +1,177 @@
+/* ------ Header Section ------- */
+/* --- Reset Styles --- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: verdana, sans-serif;
+}
+
+/* --- Navigation Styles */
+.jumbotron {
+    background-color: transparent;
+}
+
+.nav-item{
+  color: #264653;
+}
+
+.navigation {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navigation li {
+  list-style: none;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.navigation li a {
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #264653;
+  padding: 10px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navigation a:hover {
+  color: #e8811f;
+  border-bottom: 3px solid #ef7f15;
+  cursor: pointer;
+}
+
+/* --- Main Area Styles --- */
+.full-page-container {
+  background-image: url('../../images/trees.png');
+  background-size: cover;
+  padding: 0;
+}
+
+.container {
+  height: 90vh;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#home-title {
+  margin-top: -40px;
+  font-size: 10rem;
+  font-weight: bold;
+  color: #264653;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+#subtitle {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #264653;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+#main_spacing{
+  width: 100%;
+  padding-bottom: 15px;
+  text-align: left;
+}
+
+/*Form*/
+
+.form-container {
+  height: 125px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-sizing: border-box;
+  box-shadow: 2px 2px 30px #756d64;
+}
+
+.form-container, form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="text"] {
+  width: 35%;
+  height: 60px;
+  border-style: none;
+  border: 1px solid #264653;
+  margin-right: 5px;
+  font-size: 1.4rem;
+  padding-left: 10px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 3px solid #264653;
+}
+
+::placeholder {
+  font-size: 1.4rem;
+}
+
+form .search-button {
+  width: 18%;
+  height: 60px;
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-left: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #264653;
+  color: white;
+  border: none;
+}
+
+form .search-button:hover {
+  cursor: pointer;
+  background-color: #f4953d;
+  color: #264653;
+}
+
+.form-container, input[type="text"], form .search-button {
+  border-radius: 5px;
+}
+
+/*footer*/
+
+footer {
+  height: 150px;
+  background-color: #264653;
+}
+
+div.links {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer h2{
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding-top: 30px;
+}
+
+footer a {
+   padding: 0 15px;
+   font-size: 1.1rem;
+   letter-spacing: 1px;
+}

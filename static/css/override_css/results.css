@@ -1,0 +1,247 @@
+/* --- Reset Styles --- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: verdana, sans-serif;
+}
+
+body {
+  background-color: #FFF8F0;
+}
+
+/* nav bar */
+.jumbotron {
+    background-color: transparent;
+}
+
+.nav-item{
+  color: #264653;
+}
+
+.navigation {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.navigation ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navigation li {
+  list-style: none;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.navigation li a {
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #264653;
+  padding: 10px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navigation a:hover {
+  color: #e8811f;
+  border-bottom: 3px solid #ef7f15;
+  cursor: pointer;
+}
+
+/* --- Main Area Styles --- */
+.full-page-container {
+  background-color: transparent;
+  background-size: cover;
+  padding: 0;
+}
+
+h1{
+  color: #264653;
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+}
+
+.bg_image {
+  background-image: url('../../images/huts.png');
+  background-size: cover;
+  padding: 0;
+}
+
+/*R2R*/
+.route-results{
+  font-family: 'Open Sans', sans-serif;
+  width: 50%;
+  text-align: left;
+  color:  #264653;
+  padding-left: 50px;
+}
+
+.routeIteration{
+  padding-bottom: 10px;
+}
+
+.info{
+  text-align: center;
+  align-items: center;
+  padding-top: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color:  #264653;
+}
+
+.info img{
+  border: 5px solid #f4953d;
+}
+
+.info p{
+  width: 60%;
+  border: 2px solid #f4953d;
+  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 120px;
+}
+
+/*Zomato*/
+#Restaurant_subtitle{
+  padding: 25px;
+}
+
+#noneMessage{
+  color: #264653;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.zom_class{
+  color: #FFF8F0;
+  background-color: #264653;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  text-align: center;
+  border-bottom: 2px solid #FFF8F0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#restaurantName{
+  font-size: 1.6rem;
+}
+
+/*email form*/
+.form-jumbotron{
+  width: 100%;
+  height: 25em;
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  align-items: center;
+}
+
+.form-container{
+  width: 100%;
+  height: 22rem;
+  padding: 10px;
+  border: 5px solid #f4953d;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+h2{
+  color: #264653;
+  font-family: 'Gloria Hallelujah', cursive;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+form{
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 200px;
+}
+
+form #email_input{
+  width: 35%;
+  height: 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-left: 30px;
+  color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #264653;
+}
+
+input[type="text"] {
+  width: 35%;
+  height: 60px;
+  border-style: none;
+  border: 1px solid #264653;
+  margin-right: 5px;
+  font-size: 1.4rem;
+  color: #264653;
+  padding-left: 10px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border: 3px solid #264653;
+}
+
+::placeholder {
+  font-size: 1.6rem;
+}
+
+form #submit-button {
+  width: 12%;
+  height: 30px;
+  font-size: 1.6rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-left: 30px;
+  text-transform: uppercase;
+  background-color: #264653;
+  color: white;
+  border: none;
+}
+
+form #search-button:hover {
+  cursor: pointer;
+  background-color: #f4953d;
+  color: #264653;
+}
+
+
+/*footer*/
+
+footer {
+  margin-top: 100px;
+  height: 150px;
+  background-color: #264653;
+}
+
+div.links {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+footer h2{
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding-top: 30px;
+}
+
+footer a {
+   padding: 0 15px;
+   font-size: 1.1rem;
+   letter-spacing: 1px;
+}

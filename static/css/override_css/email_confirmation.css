@@ -1,0 +1,137 @@
+/* ------ Header Section ------- */
+/* --- Reset Styles --- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: verdana, sans-serif;
+}
+
+/* --- Navigation Styles */
+.jumbotron {
+    background-color: transparent;
+}
+
+.nav-item{
+  color: #264653;
+}
+
+.navigation {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.navigation li {
+  list-style: none;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 25px;
+}
+
+.navigation li a {
+  letter-spacing: 0.6px;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #264653;
+  padding: 10px 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navigation a:hover {
+  color: #e8811f;
+  border-bottom: 3px solid #ef7f15;
+  cursor: pointer;
+}
+
+/* --- Main Area Styles --- */
+.full-page-container {
+  background-image: url('../../images/trees.png');
+  background-size: cover;
+  padding: 0;
+}
+
+.container {
+  height: 250vh;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text_body{
+  height: 52rem;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #264653;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+p {
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #264653;
+  font-weight: bold;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-top: 15px;
+}
+
+.here a{
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #264653;
+  font-weight: bold;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-top: 15px;
+}
+
+.here a:hover{
+  color: #e8811f;
+  border-bottom: 1px solid #ef7f15;
+  cursor: pointer;
+}
+
+/*footer*/
+
+footer {
+  height: 150px;
+  background-color: #264653;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+div.links {
+  width: 100%;
+  text-align: center;
+}
+
+footer h2 {
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  padding-top: 30px;
+  margin-top: 0;
+}
+
+footer a {
+   padding: 0 15px;
+   font-size: 1.1rem;
+   letter-spacing: 1px;
+}
