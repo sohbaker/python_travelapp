@@ -8,7 +8,8 @@
   <meta name="description" content="Get Anywhere from Anywhere">
   <title>Destination ? Your Route</title>
   <link rel="shortcut icon" type="image/x-icon" href="../static/images/d_question.png" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="../static/css/override_css/results.css">
   <script src="../static/js/hours.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
@@ -20,10 +21,10 @@
     <div class="bg_image">
       <header class="intro">
 
-    <!-- Navigation Bar -->
-      <div class="navigation">
-        <ul>
-          <li>
+        <!-- Navigation Bar -->
+        <div class="navigation">
+          <ul>
+            <li>
             <li class="home">
               <a href="/" role="button">Home</a>
             </li>
@@ -35,92 +36,102 @@
             </li>
             <li class="get-in-touch">
               <a href="/contact" role="button">Get In Touch</a>
-          </li>
-        </ul>
-      </div>
-    </header>
+            </li>
+          </ul>
+        </div>
+      </header>
 
-<!--Main Text-->
-<div class="route_div">
-  <h1>Results of your search</h1>
-    <div class="route jumbatron">
-    <div class="row">
-      <div class="route-results col-sm-6" method="get" action="/results">
-        <p>Startpoint: <b>{{ R2R_names.start_point }}</b></p>
-        <p>Endpoint: <b>{{ R2R_names.end_point }}</b></p>
-          <br>
-        {% for x in R2R_categories %}
-          <div class="routeIteration">
-            <p><b>{{ x["name"] }}</b></p>
-            <p>Distance: {{ x["distance"] }} km</p>
-            {% if x["totalDuration"] <= 59 %}
-              <p>Total Duration: {{ x["totalDuration"] }} minutes</p>
-            {% else %}
-              <p class="timeConvert">Total Duration:</p>
-            {% endif %}
-            <p>Booking Link: <a href='{{ x["segments"][0]["agencies"][0]["links"][0]["url"] }}'>{{ x["segments"][0]["agencies"][0]["links"][0]["url"] }}</a></p>
-            <p>Price Range: {{ x["indicativePrices"][0]["currency"] }} {{ x["indicativePrices"][0]["priceLow"] }}-{{ x["indicativePrices"][0]["priceHigh"] }}</p>
+      <!--Main Text-->
+      <div class="route_div">
+        <h1>Results of your search</h1>
+        <div class="route jumbatron">
+          <div class="row">
+            <div class="route-results col-sm-6" method="get" action="/results">
+              <p>Startpoint: <b>{{ R2R_names.start_point }}</b></p>
+              <p>Endpoint: <b>{{ R2R_names.end_point }}</b></p>
+              <br>
+              {% for x in R2R_categories %}
+              <div class="routeIteration">
+                <p><b>{{ x["name"] }}</b></p>
+                <p>Distance: {{ x["distance"] }} km</p>
+                {% if x["totalDuration"] <= 59 %}
+                <p>Total Duration: {{ x["totalDuration"] }} minutes</p>
+                {% else %}
+                <p class="timeConvert">Total Duration:</p>
+                {% endif %}
+                <p>Booking Link: <a
+                    href='{{ x["segments"][0]["agencies"][0]["links"][0]["url"] }}'>{{ x["segments"][0]["agencies"][0]["links"][0]["url"] }}</a>
+                </p>
+                <p>Price Range: {{ x["indicativePrices"][0]["currency"] }}
+                  {{ x["indicativePrices"][0]["priceLow"] }}-{{ x["indicativePrices"][0]["priceHigh"] }}</p>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="info col-sm-6">
+              <img src="../static/images/map.jpg" alt="Map" style="width:525px;height:350px;">
+              <p>Would you rather drive?<br>Click <a href="https://www.google.com/maps">here</a> to check out possible
+                routes</p>
+              <p>Access further flight information at <a href="https://www.skyscanner.net/">www.skyscanner.net</a></p>
+            </div>
           </div>
-        {% endfor %}
-        </div>
-      <div class="info col-sm-6">
-        <img src="../static/images/map.jpg" alt="Map" style="width:525px;height:350px;">
-        <p>Would you rather drive?<br>Click <a href="https://www.google.com/maps">here</a> to check out possible routes</p>
-        <p>Access further flight information at <a href="https://www.skyscanner.net/">www.skyscanner.net</a></p>
         </div>
       </div>
-  </div>
-</div>
-</div>
+    </div>
 
-<!--Things to eat-->
-<div class="things-to-eat">
-  <h1 id="Restaurant_subtitle">Places to eat in {{ R2R_names.end_point }}</h1>
-    <div name="zomato" method="post" action="/results" class="container">
-      {% if zomatoRestaurants == None %}
-        <p id="noneMessage">I'm afraid we don't yet have data on your destination. Do send us your recommendations though as we would love to hear!</p>
-      {% else %}
-      {% for restaurant in zomatoRestaurants %}
+    <!--Things to eat-->
+    <div class="things-to-eat">
+      <h1 id="Restaurant_subtitle">Places to eat in {{ R2R_names.end_point }}</h1>
+      <div name="zomato" method="post" action="/results" class="container">
+        {% if zomatoRestaurants == None %}
+        <p id="noneMessage">I'm afraid we don't yet have data on your destination. Do send us your recommendations
+          though as we would love to hear!</p>
+        {% else %}
+        {% for restaurant in zomatoRestaurants %}
         <div class="zom_class">
           <p id="restaurantName"><b>{{ restaurant["restaurant"]["name"] }}</b></p>
           <p>Cuisine: {{ restaurant["restaurant"]["cuisines"] }}</p>
           <p>Address: {{ restaurant["restaurant"]["location"]["address"] }}</p>
           <a href='{{ restaurant["restaurant"]["url"] }}'>More Info</a>
         </div>
-      {% endfor %}
-    {%endif%}
-  </div>
-
+        {% endfor %}
+        {%endif%}
       </div>
 
-<!--Email Results-->
-<div class="form-jumbatron justify-content-center">
-  <div class="form-container">
-    <h2>Email yourself these restaurants in case you want to book:</h2>
-    <form method="post" action="/email">
-      <input type="email" id="email_input" name="email" required="required" placeholder="Email Address">
-      <input type="submit" value="Submit" id="submit-button">
-      {% if zomatoRestaurants == None %}
-        <input type="hidden" name="result0" value="I'm afraid we don't yet have data on your destination. Do send us your recommendations though as we would love to hear!" />
-      {% else %}
-        {% for restaurant in zomatoRestaurants %}
-        <input type="hidden" name="result{{ loop.index }}" value='{{ restaurant["restaurant"]["name"] }}' />
-        {% endfor %}
-      {%endif%}
-    </form>
-  </div>
-</div>
+    </div>
+
+    <!--Email Results-->
+    <div class="form-jumbatron justify-content-center">
+      <div class="form-container">
+        <h2>Email yourself these restaurants in case you want to book:</h2>
+        <form method="post" action="/email">
+          <input type="email" id="email_input" name="email" required="required" placeholder="Email Address">
+          <input type="submit" value="Submit" id="submit-button">
+          {% if zomatoRestaurants == None %}
+          <input type="hidden" name="result0"
+            value="I'm afraid we don't yet have data on your destination. Do send us your recommendations though as we would love to hear!" />
+          {% else %}
+          {% for restaurant in zomatoRestaurants %}
+          <input type="hidden" name="result{{ loop.index }}" value='{{ restaurant["restaurant"]["name"] }}' />
+          {% endfor %}
+          {%endif%}
+        </form>
+      </div>
+    </div>
 
 
-<!--Footer-->
-<footer>
-  <h2>Find us on social media:</h2>
-  <div class="links">
-    <a href=#><img alt="follow me on twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter40x40.png" border=0></a>
-    <a href=#><img alt="follow me on facebook" src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook40x40.png" border=0></a>
-    <a href=#><img alt="follow me on pinterest" src="https://c866088.ssl.cf3.rackcdn.com/assets/pinterest40x40.png" border=0></a>
-  </div>
-</footer>
+    <!--Footer-->
+    <footer>
+      <h2>Find us on social media:</h2>
+      <div class="links">
+        <a href=#><img alt="follow me on twitter" src="https://c866088.ssl.cf3.rackcdn.com/assets/twitter40x40.png"
+            border=0></a>
+        <a href=https://www.facebook.com/DestinationWhereTo/> <img alt="follow me on facebook"
+          src="https://c866088.ssl.cf3.rackcdn.com/assets/facebook40x40.png" border=0></a>
+        <a href=https://www.pinterest.co.uk/destinationWhereTo/> <img alt="follow me on pinterest"
+          src="https://c866088.ssl.cf3.rackcdn.com/assets/pinterest40x40.png" border=0></a>
+      </div>
+    </footer>
 
-  </body>
+</body>
+
 </html>
